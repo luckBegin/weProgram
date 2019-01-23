@@ -1,0 +1,7 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var host = '';
+exports.API = {
+    url: host
+};
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiQVBJLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiQVBJLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7O0FBQUEsSUFBTSxJQUFJLEdBQVksRUFBRSxDQUFFO0FBRWIsUUFBQSxHQUFHLEdBQVk7SUFDeEIsR0FBRyxFQUFHLElBQUk7Q0FDYixDQUFDIiwic291cmNlc0NvbnRlbnQiOlsiY29uc3QgaG9zdCA6IHN0cmluZyA9ICcnIDtcclxuXHJcbmV4cG9ydCBjb25zdCBBUEkgOiBPYmplY3QgPSB7XHJcbiAgICB1cmwgOiBob3N0XHJcbn07Il19

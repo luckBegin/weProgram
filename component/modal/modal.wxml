@@ -1,0 +1,2 @@
+<!--component/modal/modal.wxml-->
+<text hidden="{{ show }}"> {{ show }}</text>
