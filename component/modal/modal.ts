@@ -1,6 +1,7 @@
 // component/modal/modal.js
 import { menu } from '../../service/menu/menu.service' ;
 import { $Event } from '../../util/Event/Event' ;
+
 //@ts-ignore
 Component({
     /**

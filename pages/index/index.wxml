@@ -9,6 +9,5 @@
   </view>
   <view class="usermotto">
     <text class="user-motto">{{motto}}</text>
-    <modal></modal>
   </view>
 </view>

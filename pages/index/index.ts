@@ -2,7 +2,6 @@
 //获取应用实例
 // import { IMyApp } from '../../app'
 // const app = getApp<IMyApp>()
-import { $Event } from '../../util/Event/Event' ;
 Page({
   data: {
 
@@ -12,6 +11,5 @@ Page({
   },
 
   onLoad() {
-    $Event.$emit("load" , true) ;
   },
 })
