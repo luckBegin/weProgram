@@ -27,31 +27,20 @@ class BuildRequest {
 
 	}
 }
-export const request = {
-	GET : ( url : string , paras ?: object ) : Promise<any> => {
-		return new Promise<any>( ( (resolve, reject) => {
-			const header = new BuildHeader()
-				.build( { url : url })
-			 	.build( { success  : ( data : any ) : void => { resolve( data ) } } )
-				.build( { error :  ( err : any ) : void => { reject(err ) } } ) ;
 
-			if(paras)
-				header.build( { data : paras } ) ;
+export class HTTP {
+	static GET : Function = ( url : string , data? : object) : Promise<any> => {
+		return BuildRequest.build('get' , url , data )
+	};
 
+	static POST : Function = ( url :string , data ?: object ) : Promise<any> => {
+		return BuildRequest.build("POST" , url , data) ;
+	}
+	static DELETE : Function = ( url : string , data ?: object) : Promise<any> => {
+		return BuildRequest.build(url , data ) ;
+	}
 
-		}));
-	},
-	POST : ( url : string , paras ?: object ) : Promise<any> => {
-		return new Promise<any>( ( (resolve, reject) => {
-			const header = new BuildHeader()
-				.build( { url : url })
-				.build( { success  : ( data : any ) : void => { resolve( data ) } } )
-				.build( { error :  ( err : any ) : void => { reject(err ) } } ) ;
-
-			if(paras)
-				header.build( { data : paras } ) ;
-
-			wx.request( header.getHeader() as any )
-		}));
+	static PUT : Function = (url :string , data ?: object ) : Promise<any> => {
+		return BuildRequest.build(url , data) ;
 	}
 }
