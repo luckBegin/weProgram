@@ -27,6 +27,6 @@ class Event{
             item.call(this , data) ;
         })
     }
-};
+}
 
 export const $Event = new Event ;

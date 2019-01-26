@@ -13,7 +13,7 @@ class BuildHeader {
 
 class BuildRequest {
 	static build : Function = ( method : string , url : string ,  data ? : any ) : Promise<any> => {
-		return new Promise<any>( ( (resolve, reject) => {
+		return new Promise< any >( ( (resolve, reject) => {
 			const option = new BuildHeader()
 				.build( { url : url , method : method })
 				.build( { success  : ( data : any ) : void => { resolve( data ) } } )
@@ -22,9 +22,8 @@ class BuildRequest {
 			if(data)
 				option.build( { data : data } ) ;
 
-			wx.request( option.getHeader() as any ) ;
+			wx.request( option.getHeader() ) ;
 		}));
-
 	}
 }
 
@@ -37,10 +36,10 @@ export class HTTP {
 		return BuildRequest.build("POST" , url , data) ;
 	}
 	static DELETE : Function = ( url : string , data ?: object) : Promise<any> => {
-		return BuildRequest.build(url , data ) ;
+		return BuildRequest.build("DELETE" , url , data ) ;
 	}
 
 	static PUT : Function = (url :string , data ?: object ) : Promise<any> => {
-		return BuildRequest.build(url , data) ;
+		return BuildRequest.build("PUT" ,url , data) ;
 	}
 }
